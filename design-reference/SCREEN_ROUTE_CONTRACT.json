@@ -1,0 +1,231 @@
+{
+  "schema_version": "traveler-screen-route-v1",
+  "framework": "nextjs-app-router",
+  "source_documents": [
+    "docs/03_UI_COVERAGE_ANALYSIS.md",
+    "docs/04_UIUX_PLAN.md",
+    "docs/STITCH_VALIDATION_REPORT.md",
+    "design-reference/D-001/DESIGN.md",
+    "design-reference/UI_CONTRACT.md"
+  ],
+  "screen_count": 5,
+  "core_screen_ids": ["SCR-001", "SCR-003", "SCR-004", "SCR-002"],
+  "auxiliary_screen_ids": ["SCR-005"],
+  "screens": [
+    {
+      "screen_id": "SCR-001",
+      "classification": "core",
+      "route": "/",
+      "page_entry": "src/app/page.tsx",
+      "device_variants": ["desktop", "mobile"],
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": true,
+      "section_order": [
+        "hero-search",
+        "domestic-destinations-grid",
+        "overseas-destinations-grid",
+        "theme-chip-list",
+        "country-safety-grid",
+        "recent-mate-posts-or-empty",
+        "curator-summary-cta-banner"
+      ],
+      "forbidden_features": [
+        "starter-template-remnants",
+        "unified-destination-safety-search",
+        "share-url-button",
+        "real-time-flight-hotel-price-claims",
+        "lorem-ipsum-or-placeholder-copy",
+        "airbnb-trademark-elements",
+        "purchase-reservation-payment-ui",
+        "star-ratings-or-reviews"
+      ]
+    },
+    {
+      "screen_id": "SCR-002",
+      "classification": "core",
+      "route": "/about",
+      "page_entry": "src/app/about/page.tsx",
+      "device_variants": ["desktop"],
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_order": [
+        "profile-hero",
+        "travel-stats",
+        "philosophy-split",
+        "timeline",
+        "visited-countries-chip",
+        "gallery",
+        "favorite-destinations-cta"
+      ],
+      "forbidden_features": [
+        "star-ratings-or-reviews",
+        "airbnb-trademark-elements",
+        "purchase-reservation-payment-ui",
+        "content-cms-upload-workflow",
+        "lorem-ipsum-or-placeholder-copy"
+      ]
+    },
+    {
+      "screen_id": "SCR-003",
+      "classification": "core",
+      "route": "/travel-tools",
+      "page_entry": "src/app/travel-tools/page.tsx",
+      "device_variants": ["desktop", "mobile"],
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_order": [
+        "intro",
+        "tab-switcher-flight-hotel-mate",
+        "condition-input-form",
+        "summary-and-outbound-action-card",
+        "search-tips-3-step",
+        "mate-tab-login-or-write-form"
+      ],
+      "forbidden_features": [
+        "real-time-flight-hotel-price-claims",
+        "server-persistence-of-trip-inputs",
+        "outbound-url-query-transfer",
+        "purchase-reservation-payment-booking-ui",
+        "real-email-delivery-integration",
+        "lorem-ipsum-or-placeholder-copy"
+      ]
+    },
+    {
+      "screen_id": "SCR-004",
+      "classification": "core",
+      "route": "/mates",
+      "page_entry": "src/app/mates/page.tsx",
+      "device_variants": ["desktop", "mobile"],
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_order": [
+        "intro-and-write-cta",
+        "filter-and-result-summary",
+        "mate-post-list-or-empty",
+        "list-detail-split-or-drawer",
+        "application-steps-3-step",
+        "safety-report-block-cta"
+      ],
+      "forbidden_features": [
+        "star-ratings-or-manner-score-or-trust-count-badges",
+        "realtime-location-sharing",
+        "in-app-chat-or-video-call",
+        "minor-mate-matching",
+        "public-contact-info-exposure",
+        "lorem-ipsum-or-placeholder-copy"
+      ]
+    },
+    {
+      "screen_id": "SCR-005",
+      "classification": "auxiliary",
+      "route": "/account",
+      "page_entry": "src/app/account/page.tsx",
+      "device_variants": ["desktop"],
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_order": [
+        "role-tabs-guest-member-admin",
+        "guest-login-signup-reset-and-security-info",
+        "member-profile-and-adult-verification",
+        "member-my-posts-and-requests-and-blocks",
+        "admin-report-status-management",
+        "admin-outbound-url-settings"
+      ],
+      "forbidden_features": [
+        "admin-content-crud-beyond-reports-and-urls",
+        "general-purpose-audit-log-ui",
+        "stats-dashboard",
+        "media-upload-license-workflow",
+        "real-email-delivery-integration",
+        "lorem-ipsum-or-placeholder-copy",
+        "airbnb-trademark-elements"
+      ]
+    }
+  ],
+  "technical_routes": [
+    {
+      "name": "auth-callback",
+      "route": "/auth/callback",
+      "type": "route-handler",
+      "counted_as_screen": false,
+      "note": "Supabase 이메일 인증 콜백 처리, 완료 후 /account로 리다이렉트"
+    },
+    {
+      "name": "destinations-api",
+      "route": "/api/destinations",
+      "type": "api-route",
+      "counted_as_screen": false,
+      "note": "SCR-001 여행지 목록·필터·검색용 Route Handler"
+    },
+    {
+      "name": "safety-api",
+      "route": "/api/safety/[countryCode]",
+      "type": "api-route",
+      "counted_as_screen": false,
+      "note": "SCR-001 안전정보 Drawer용 Route Handler"
+    },
+    {
+      "name": "mates-api",
+      "route": "/api/mates",
+      "type": "api-route",
+      "counted_as_screen": false,
+      "note": "SCR-004 동행글 목록·작성·참가요청 Route Handler"
+    },
+    {
+      "name": "reports-api",
+      "route": "/api/reports",
+      "type": "api-route",
+      "counted_as_screen": false,
+      "note": "SCR-004 신고 제출 및 SCR-005 관리자 신고 상태 변경 Route Handler"
+    },
+    {
+      "name": "admin-settings-api",
+      "route": "/api/admin/settings/outbound",
+      "type": "api-route",
+      "counted_as_screen": false,
+      "note": "SCR-005 관리자 외부 URL 설정 저장 Route Handler"
+    },
+    {
+      "name": "not-found",
+      "route": "*",
+      "type": "not-found",
+      "counted_as_screen": false,
+      "note": "src/app/not-found.tsx, 404 처리"
+    },
+    {
+      "name": "error-boundary",
+      "route": "*",
+      "type": "error-boundary",
+      "counted_as_screen": false,
+      "note": "src/app/error.tsx, 500/런타임 오류 처리"
+    }
+  ],
+  "required_navigation": [
+    { "from": "SCR-001", "to": "SCR-003", "trigger": "Hero CTA '여행 준비 시작하기'" },
+    { "from": "SCR-001", "to": "SCR-001", "trigger": "여행지 카드 클릭 → 같은 화면 Drawer(여행지 상세)" },
+    { "from": "SCR-001", "to": "SCR-001", "trigger": "안전정보 카드 클릭 → 같은 화면 Drawer(안전정보 상세)" },
+    { "from": "SCR-001", "to": "SCR-004", "trigger": "최근 동행글 섹션 '동행 더 보기' 또는 작성 CTA" },
+    { "from": "SCR-001", "to": "SCR-002", "trigger": "free_traveler 요약 CTA '대표 소개 보기'" },
+    { "from": "SCR-002", "to": "SCR-001", "trigger": "방문 국가/추천 여행지 클릭 → 해당 여행지 상세 Drawer" },
+    { "from": "SCR-002", "to": "SCR-003", "trigger": "CTA '여행 준비 시작하기'" },
+    { "from": "SCR-002", "to": "SCR-004", "trigger": "CTA '동행 찾아보기'" },
+    { "from": "SCR-003", "to": "SCR-004", "trigger": "동행글 작성 완료 → 작성한 글 상세" },
+    { "from": "SCR-003", "to": "SCR-005", "trigger": "동행 탭 '로그인하고 성인 인증하기' (비로그인/미성년 상태)" },
+    { "from": "SCR-004", "to": "SCR-003", "trigger": "'새 동행글 작성하기' → 동행 구하기 탭" },
+    { "from": "SCR-004", "to": "SCR-005", "trigger": "비로그인/성인 미확인 상태에서 참가 요청·신고·차단 시도" },
+    { "from": "SCR-005", "to": "SCR-001", "trigger": "내 활동 탭의 즐겨찾기/여행지 관련 항목 클릭" },
+    { "from": "SCR-005", "to": "SCR-004", "trigger": "내 활동 탭의 내 글/참가 요청 항목 클릭" },
+    { "from": "SCR-005", "to": "SCR-003", "trigger": "'새로운 동행을 시작해보세요' CTA" }
+  ],
+  "completion_checks": {
+    "no_duplicate_routes": true,
+    "no_duplicate_page_entries": true,
+    "screen_count_equals_5": true,
+    "core_and_auxiliary_distinction_present": true
+  }
+}
