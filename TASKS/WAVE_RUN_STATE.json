@@ -1,0 +1,427 @@
+{
+  "schema_version": "traveler-wave-run-state-v1",
+  "plan_generated_at": "2026-09-17T11:25:41+00:00",
+  "waves": [
+    {
+      "wave_id": "W01",
+      "status": "blocked",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "DATA-DESTINATIONS",
+          "status": "blocked"
+        },
+        {
+          "task_id": "DATA-REPRESENTATIVE",
+          "status": "pending"
+        },
+        {
+          "task_id": "DATA-SAFETY",
+          "status": "pending"
+        },
+        {
+          "task_id": "SHARED-DESIGN-TOKENS",
+          "status": "pending"
+        },
+        {
+          "task_id": "SHARED-POLICY-CONTENT",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W02",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "SHARED-HEADER-FOOTER",
+          "status": "pending"
+        },
+        {
+          "task_id": "SHARED-TOAST-ALERT",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W03",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "SHARED-ERROR-PAGES",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W04",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "DB-ACCESS",
+          "status": "pending"
+        },
+        {
+          "task_id": "DB-SCHEMA-BASE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W05",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "API-ADMIN-SETTINGS",
+          "status": "pending"
+        },
+        {
+          "task_id": "API-AUTH-ADULT-VERIFY",
+          "status": "pending"
+        },
+        {
+          "task_id": "DB-RLS-BASE",
+          "status": "pending"
+        },
+        {
+          "task_id": "DB-SEED-BASE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W06",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "API-MATE-POSTS",
+          "status": "pending"
+        },
+        {
+          "task_id": "API-REPORTS",
+          "status": "pending"
+        },
+        {
+          "task_id": "API-USER-BLOCKS",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W07",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "API-MATE-APPLICATIONS",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W08",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR001-FAVORITES",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR001-DESTINATION-GRID",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR001-SAFETY-DRAWER",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR001-SEARCH",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W09",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR001-DESTINATION-DRAWER",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR001-MATE-PREVIEW",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W10",
+      "status": "pending",
+      "checkpoint_required": true,
+      "tasks": [
+        {
+          "task_id": "PAGE-SCR001",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W11",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR002-COUNTRY-CHIPS",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR002-GALLERY",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR002-TIMELINE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W12",
+      "status": "pending",
+      "checkpoint_required": true,
+      "tasks": [
+        {
+          "task_id": "PAGE-SCR002",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W13",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR003-TABS",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W14",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR003-FLIGHT",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR003-HOTEL",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR003-MATE-WRITE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W15",
+      "status": "pending",
+      "checkpoint_required": true,
+      "tasks": [
+        {
+          "task_id": "PAGE-SCR003",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W16",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR004-BLOCK",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR004-FILTER",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR004-REPORT",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W17",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR004-LIST",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W18",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR004-DETAIL",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W19",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR004-APPLICATION",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W20",
+      "status": "pending",
+      "checkpoint_required": true,
+      "tasks": [
+        {
+          "task_id": "PAGE-SCR004",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W21",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CMP-SCR005-AUTH",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR005-PROFILE",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR005-ADMIN",
+          "status": "pending"
+        },
+        {
+          "task_id": "CMP-SCR005-MY-ACTIVITY",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W22",
+      "status": "pending",
+      "checkpoint_required": true,
+      "tasks": [
+        {
+          "task_id": "PAGE-SCR005",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W23",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "SHARED-SEO-METADATA",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W24",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "GOV-CONTENT-COMPLETENESS",
+          "status": "pending"
+        },
+        {
+          "task_id": "SHARED-A11Y-FOCUS",
+          "status": "pending"
+        },
+        {
+          "task_id": "TEST-RLS-BASIC",
+          "status": "pending"
+        },
+        {
+          "task_id": "UNIT-TRAVEL-DATES",
+          "status": "pending"
+        },
+        {
+          "task_id": "UNIT-CONTACT-DETECTION",
+          "status": "pending"
+        },
+        {
+          "task_id": "UNIT-MATE-STATE",
+          "status": "pending"
+        },
+        {
+          "task_id": "E2E-TRAVEL-TOOLS",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W25",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "E2E-MATE-AUTH",
+          "status": "pending"
+        },
+        {
+          "task_id": "E2E-PUBLIC-SMOKE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W26",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "CI-PIPELINE",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "wave_id": "W27",
+      "status": "pending",
+      "checkpoint_required": false,
+      "tasks": [
+        {
+          "task_id": "DEPLOY-VERCEL-SUPABASE-CHECK",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

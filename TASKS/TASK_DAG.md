@@ -1,6 +1,6 @@
 # Free Traveler — Task Dependency DAG
 
-- **생성:** `scripts/build_waves.py` (2026-09-16T12:34:42+00:00)
+- **생성:** `scripts/build_waves.py` (2026-09-17T11:25:41+00:00)
 - **Task 총 수:** 58
 - **순환 의존성:** 0건
 

@@ -1,6 +1,6 @@
 # Free Traveler — Wave Plan
 
-- **생성:** `scripts/build_waves.py` (2026-09-16T12:34:42+00:00)
+- **생성:** `scripts/build_waves.py` (2026-09-17T11:25:41+00:00)
 - **정본 선언:** 이 문서와 `TASKS/WAVE_STATE.json`의 Wave ID가 이후 `/run-wave` 등 실행 단계의 정본이다.
   Wave ID는 W01부터 실제로 필요한 만큼만 생성되며 W00~W10으로 미리 고정하지 않는다.
 - **재생성:** `scripts/audit_tasks.py`를 다시 실행해 `TASKS/TASK_MANIFEST.csv`가 갱신되면, `wave_id` 열이 사라지므로 `scripts/build_waves.py`를 다시 실행해야 한다.

@@ -1,0 +1,16 @@
+# 빌드 산출물
+.next/
+out/
+build/
+node_modules/
+
+# 자동 생성/잠금 파일(사람이 직접 포맷하지 않음)
+package-lock.json
+next-env.d.ts
+*.tsbuildinfo
+
+# 요구사항·Task·Wave·디자인 문서는 format:check 대상에서 제외한다.
+docs/
+TASKS/
+design-reference/
+.claude/
