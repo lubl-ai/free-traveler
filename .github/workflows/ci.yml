@@ -38,6 +38,9 @@ jobs:
       - name: Unit tests
         run: npm run test:unit
 
+      - name: Content completeness (GOV-CONTENT-COMPLETENESS)
+        run: python3 scripts/check_content_completeness.py
+
       - name: Task contract
         run: npm run task:contract
 
@@ -47,8 +50,45 @@ jobs:
       - name: Build
         run: npm run build
 
-  public-smoke:
-    name: public-smoke
+  rls-integration:
+    name: rls-integration
+    needs: quality
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Apply migrations
+        run: |
+          for f in supabase/migrations/*.sql; do
+            echo "Applying $f"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
+
+      - name: Apply seed data
+        run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/seed.sql
+
+      - name: RLS basic policy tests (TEST-RLS-BASIC)
+        run: psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/tests/rls_basic.sql
+
+  e2e:
+    name: e2e
     needs: quality
     runs-on: ubuntu-latest
     steps:
@@ -67,8 +107,8 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Public Smoke (no login required, no Supabase secret required)
-        run: npm run test:e2e:public
+      - name: E2E tests (public-smoke, travel-tools, mate-auth — Chromium only)
+        run: npm run test:e2e
 
       - name: Upload Playwright report (on failure only)
         if: failure()

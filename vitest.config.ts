@@ -5,6 +5,11 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      // The real `server-only` package throws outside Next's RSC build
+      // pipeline. Stubbed here (test-only) so UNIT-MATE-STATE can import
+      // pure functions from route.ts files that transitively import
+      // src/lib/db/client.ts (which is guarded by `import 'server-only'`).
+      "server-only": path.resolve(__dirname, "./tests/unit-stubs/server-only.ts"),
     },
   },
   test: {

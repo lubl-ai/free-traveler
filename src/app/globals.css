@@ -1,26 +1,94 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+@import "../styles/tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/**
+ * Free Traveler Global Styles
+ * Design tokens from design-reference/D-001/DESIGN.md (LOCKED)
+ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-canvas text-body font-base;
+  }
+
+  /* Display text styles */
+  h1 {
+    @apply text-display-xl font-bold tracking-tighter;
+  }
+
+  h2 {
+    @apply text-display-lg font-semibold;
+  }
+
+  h3 {
+    @apply text-display-md font-semibold;
+  }
+
+  /* Body text */
+  p {
+    @apply text-body-md;
+  }
+
+  a {
+    @apply text-info hover:text-info/80 transition-colors;
+  }
+
+  /* REQ-NF-023 — visible keyboard focus indicator, global for every
+     interactive element (buttons, links, inputs, selects, textareas,
+     custom [role="tab"]/[role="button"] elements). Mouse/touch activation
+     never shows this — :focus-visible already limits it to keyboard (and
+     programmatic) focus. */
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 h-12 rounded-sm bg-coral text-on-coral text-button-md transition-colors;
+    &:hover {
+      @apply bg-coral-active;
+    }
+    &:disabled {
+      @apply bg-coral-disabled cursor-not-allowed;
+    }
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 h-12 rounded-sm bg-canvas text-ink text-button-md border border-border-strong transition-colors;
+    &:hover {
+      @apply bg-surface-soft;
+    }
+  }
+
+  /* Filter chip */
+  .chip {
+    @apply inline-flex items-center justify-center px-4 h-10 rounded-full bg-surface-strong text-body text-body-sm transition-colors;
+    &.selected {
+      @apply bg-coral text-on-coral;
+    }
+  }
+
+  /* Tab pill */
+  .tab-pill {
+    @apply inline-flex items-center justify-center px-4 h-11 rounded-full bg-surface-strong text-muted text-body-sm transition-colors;
+    &.active {
+      @apply bg-coral text-on-coral;
+    }
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-canvas rounded-md border border-hairline transition-shadow;
+    &:hover {
+      @apply shadow-floating;
+    }
+  }
 }

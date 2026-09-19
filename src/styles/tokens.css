@@ -1,0 +1,58 @@
+/**
+ * Free Traveler Design Tokens
+ * From design-reference/D-001/DESIGN.md (LOCKED)
+ * REQ-NF-006,023
+ *
+ * Single source of truth for color, typography, spacing, and shadow design tokens
+ */
+
+@layer base {
+  :root {
+    /* Color tokens */
+    --color-canvas: #FFFFFF;
+    --color-surface-soft: #F7F7F8;
+    --color-surface-strong: #F0F0F2;
+    --color-hairline: #E4E4E8;
+    --color-hairline-soft: #EFEFF2;
+    --color-border-strong: #C7C7CE;
+    --color-ink: #2A2A2E;
+    --color-body: #4B4B50;
+    --color-muted: #767680;
+    --color-muted-soft: #9B9BA3;
+    --color-coral: #FF6B4A;
+    --color-coral-active: #E5502F;
+    --color-coral-disabled: #FFD9CC;
+    --color-on-coral: #FFFFFF;
+    --color-danger: #C4351A;
+    --color-warning: #B8720A;
+    --color-info: #2557C7;
+    --color-success: #1E8A5F;
+
+    /* Typography tokens */
+    --font-family-base: 'Inter', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+
+    /* Spacing tokens (px) */
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-section-desktop-min: 64px;
+    --spacing-section-desktop-max: 96px;
+    --spacing-section-mobile-min: 40px;
+    --spacing-section-mobile-max: 64px;
+
+    /* Rounded (radius) tokens (px) */
+    --rounded-sm: 8px;
+    --rounded-md: 14px;
+    --rounded-lg: 20px;
+    --rounded-full: 9999px;
+
+    /* Shadow tokens */
+    --shadow-none: none;
+    --shadow-floating: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-scrim: rgba(0, 0, 0, 0.5);
+  }
+}
